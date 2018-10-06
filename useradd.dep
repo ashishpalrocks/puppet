@@ -1,0 +1,12 @@
+user { 'amit':
+        ensure => 'present',
+        home =>   '/home/amit',
+        managehome => 'true',
+        before => File[ '/home/amit']
+      }
+file { '/home/amit': 
+       ensure => 'directory',
+       owner => 'amit',
+       group => 'amit'
+     }
+     
